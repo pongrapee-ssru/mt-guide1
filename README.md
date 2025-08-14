@@ -1,4 +1,4 @@
-#All-in-one branch
+# All-in-one branch
 Everything is included in a single HTML file:
 - DOM
 - CSS styles + media query (within <head>)
