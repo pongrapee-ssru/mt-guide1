@@ -6,7 +6,7 @@ document.getElementById("volumeCalculator").addEventListener("submit", function(
     // Get the input values
     const radius = parseFloat(document.getElementById('inRadius').value);
     const height = parseFloat(document.getElementById('inHeight').value);
-    const unit = parseFloat(document.getElementById("inUnit").value);
+    const unit = parseFloat(document.querySelector('input[name="inUnit"]:checked').value);
     //console.log(radius, height, unit); // Debugging output
 
     // Perform the calculation
