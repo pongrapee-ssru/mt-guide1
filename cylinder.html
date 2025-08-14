@@ -15,19 +15,25 @@
 </header>
 
 <main>
+    <!-- Use normal button - Require a function -->
+    <!-- Use <article> instead of <div> -->
+    <!-- Use "main article{" in CSS to select <article> elements -->
+    <article>
+        <figure>
+            <img src="asset/tank.jpg" height="150" alt="Cylinder tank">
+            <figcaption>Cylinder tank</figcaption>
+            <figcaption>Source: <a href="https://pixabay.com/photos/factory-storage-tank-chemistry-644982/" target="_blank">Pixabay</a></figcaption>
+        </figure>
+    </article>
 
-    <div class="column">
-        <img src="asset/tank.jpg" height="150" alt="Cylinder tank">
-        <p>Cylinder tank</p>
-        <p>Source: <a href="https://pixabay.com/photos/factory-storage-tank-chemistry-644982/" target="_blank">Pixabay</a></p>
-    </div>
-
-    <div class="column">
+    <article>
         <h2>Cylinder Volume</h2>
-        <img src="asset/cylinder.png" height="150" alt="cylinder volume">
-    </div>
+        <figure>
+            <img src="asset/cylinder.png" height="150" alt="cylinder volume">
+        </figure>
+    </article>
 
-    <div class="column">
+    <article>
         <h2>Volume Calculator</h2>
         <form id="volumeCalculator" onsubmit="return false">
             <p><label for="inRadius">Radius:</label>
@@ -39,10 +45,10 @@
                 <option value="1">cm</option>
                 <option value="1000">mm</option>
             </select></p>
-            <p><button type="submit">Calculate</button></p>
+            <p><button onclick="calculateVolume()">Calculate</button></p>
         </form>
         <p id="result"></p>
-    </div>          
+    </article>          
 </main>
 
 <!--In this case, the script must be loaded after the form. Otherwise, it will not recognize those ids.-->

@@ -3,7 +3,7 @@ header h1 {
 }
 
 @media screen and (min-width: 576px){
-    .column {
+    main article {
         width: 30%;
         display: inline-block;
         margin: 1%;
