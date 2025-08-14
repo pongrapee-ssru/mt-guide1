@@ -16,6 +16,7 @@
 
 <main>
     <!-- Use submit button - Require an event listener in JS -->
+    <!-- Display result in disabled input instead of blank paragraph --> 
     <div class="column">
         <img src="asset/tank.jpg" height="150" alt="Cylinder tank">
         <p>Cylinder tank</p>
@@ -39,9 +40,10 @@
                 <option value="1">cm</option>
                 <option value="1000">mm</option>
             </select></p>
+            <p><label for="result">Volume:</label>
+            <input type="number" id="result" disabled>cm<sup>3</sup></p>
             <p><button type="submit">Calculate</button></p>
         </form>
-        <p id="result"></p>
     </div>          
 </main>
 
