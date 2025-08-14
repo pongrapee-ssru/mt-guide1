@@ -1,7 +1,4 @@
-document.getElementById("volumeCalculator").addEventListener("submit", function(event) {
-   
-    // Prevent form submission
-    event.preventDefault(); 
+function calculateVolume() {
 
     // Get the input values
     const radius = parseFloat(document.getElementById('inRadius').value);
@@ -12,9 +9,12 @@ document.getElementById("volumeCalculator").addEventListener("submit", function(
     // Perform the calculation
     const volume = Math.PI * Math.pow(radius, 2) * height / unit; // Perform V = PI * r^2 * h
 
-    // Build result message
+    // Build output message
     const resultMessage = "Volume = " + volume.toFixed(2) + " cm<sup>3</sup>";
 
     // Display result
     document.getElementById("result").innerHTML = resultMessage;
-});  
+
+    // Prevent form submission
+    return false;
+};
