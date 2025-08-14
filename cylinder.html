@@ -4,7 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cylinder</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        header h1 {
+            text-align: center;
+        }
+
+        @media screen and (min-width: 576px){
+            .column {
+                width: 30%;
+                display: inline-block;
+                margin: 1%;
+                text-align: center;
+                vertical-align: top;
+            }
+        }
+    </style>
 </head>
 <body>  
 
@@ -39,14 +53,35 @@
                 <option value="1">cm</option>
                 <option value="1000">mm</option>
             </select></p>
-            <p><button type="submit">Calculate</button></p>
+            <p><button onclick="calculateVolume()">Calculate</button></p>
         </form>
         <p id="result"></p>
     </div>          
 </main>
 
 <!--In this case, the script must be loaded after the form. Otherwise, it will not recognize those ids.-->
-<script src="script.js"></script>
+<script>
+    function calculateVolume() {
+
+        // Get the input values
+        const radius = parseFloat(document.getElementById('inRadius').value);
+        const height = parseFloat(document.getElementById('inHeight').value);
+        const unit = parseFloat(document.getElementById("inUnit").value);
+        //console.log(radius, height, unit); // Debugging output
+
+        // Perform the calculation
+        const volume = Math.PI * Math.pow(radius, 2) * height / unit; // Perform V = PI * r^2 * h
+
+        // Build output message
+        const resultMessage = "Volume = " + volume.toFixed(2) + " cm<sup>3</sup>";
+
+        // Display result
+        document.getElementById("result").innerHTML = resultMessage;
+
+        // Prevent form submission
+        return false;
+    };
+</script>
 
 </body>
 
