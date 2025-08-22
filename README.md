@@ -1,5 +1,5 @@
 # All-in-one branch
-- Use a submit button which generates a "submit" event when clicked. Requires an event listener in JS.
+- Use a normal button that calls a function in JS. 
 - Use media query to add a breakpoint.
 - Everything is included in a single HTML file:
   - DOM
